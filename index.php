@@ -33,7 +33,7 @@
                                 <ul class="list-group list-group-flush border border-1 rounded">
                                     <li v-for="(task, index) in todoList" :key="index" class="list-group-item d-flex justify-content-between ">
                                         {{ task.text }}
-                                        <i  class="fas fa-trash-alt mx-1"></i>
+                                        <i @click="deleteTask(index)" class="fas fa-trash-alt mx-1"></i>
                                     </li>
                                 </ul>
                             </div>

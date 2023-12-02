@@ -15,7 +15,13 @@ if(isset($_POST['task'])){
     file_put_contents('todo-list.json', json_encode($list));
 }   
 
-
+if (isset($_POST['deleteTask'])) {
+    $index = $_POST['deleteTask'];
+    if (isset($list[$index])) {
+        array_splice($list, $index, 1);  
+        file_put_contents('todo-list.json', json_encode($list));
+    }
+} 
 
 
 
