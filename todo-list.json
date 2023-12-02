@@ -1,0 +1,23 @@
+
+[
+  {
+    "text": "Svegliarsi al mattino",
+    "done": false
+  },
+  {
+    "text": "Fare la colazione",
+    "done": true
+  },
+  {
+    "text": "Fare lezione",
+    "done": false
+  },
+  {
+    "text": "Pranzare",
+    "done": true
+  },
+  {
+    "text": "Fare esercizio",
+    "done": false
+  }
+]
