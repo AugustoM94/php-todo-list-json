@@ -32,7 +32,7 @@
                             <div class="col-12">
                                 <h1 class="display-1 text-muted">Todo List</h1>
                                 <ul class="list-group list-group-flush border border-1 rounded">
-                                    <li class="list-group-item "></li>
+                                    <li v-for="(task, index) in todoList" :key="index" class="list-group-item ">{{ task.text  }}</li>
                                 </ul>
                             </div>
                         </div>
