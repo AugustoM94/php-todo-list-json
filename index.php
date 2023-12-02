@@ -25,14 +25,16 @@
 <body>
     <div id="app">
         <div class="wrapper">
-            <div id="app">
                 <section class="todo-list py-3">
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
-                                <h1 class="display-1 text-muted">Todo List</h1>
+                                <h1 class="display-1 ">Todo List</h1>
                                 <ul class="list-group list-group-flush border border-1 rounded">
-                                    <li v-for="(task, index) in todoList" :key="index" class="list-group-item ">{{ task.text  }}</li>
+                                    <li v-for="(task, index) in todoList" :key="index" class="list-group-item d-flex justify-content-between ">
+                                        {{ task.text }}
+                                        <i  class="fas fa-trash-alt mx-1"></i>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -47,7 +49,7 @@
                                         aria-label="Inserisci nuovo elemento per la lista"
                                         aria-describedby="button-add" v-model="newTask">
                                     <button class="btn btn-outline-warning" type="button"
-                                        id="button-add">Inserisci</button>
+                                        id="button-add" @click="addTask">Inserisci</button>
                                 </div>
                             </div>
                         </div>

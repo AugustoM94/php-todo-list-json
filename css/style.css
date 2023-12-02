@@ -12,5 +12,38 @@
 
 body {
     font-family: 'Lato', sans-serif;
+     margin: 20px;
+     background-image: url(../image/natale.gif);
 }
 
+h1{
+    color: red;
+}
+
+#app {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.todo-list {
+    margin-top: 20px;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.add-todo {
+    margin-top: 20px;
+}
+
+i{
+    font-size: .8em;
+}
+li:hover{
+    cursor: pointer;
+}

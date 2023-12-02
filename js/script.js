@@ -15,7 +15,7 @@ createApp({
         this.todoList = response.data;
       })
          .catch((error) =>{
-         console.log(error);
+         console.log(error);newTask
       })
          .finally((error) =>{
          console.log(error);
@@ -37,7 +37,9 @@ createApp({
          .catch((error) => {
           console.log(error);
           })
-    }
+    },
+
+
   },
   mounted() {
    this.readList();
