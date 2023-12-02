@@ -23,7 +23,15 @@ if (isset($_POST['deleteTask'])) {
     }
 } 
 
+if (isset($_POST['updateTask'])) {
+    $updatedTask = json_decode($_POST['updateTask'], true);
+    $index = array_search($updatedTask, $list);
 
+    if ($index !== false) {
+        $list[$index]['done'] = !$list[$index]['done'];
+        file_put_contents('todo-list.json', json_encode($list));
+    }
+}
 
 header('Content-Type: application/json');
 

@@ -31,11 +31,13 @@
                             <div class="col-12">
                                 <h1 class="display-1 ">Todo List</h1>
                                 <ul class="list-group list-group-flush border border-1 rounded">
-                                    <li v-for="(task, index) in todoList" :key="index" class="list-group-item d-flex justify-content-between ">
-                                        {{ task.text }}
-                                        <i @click="deleteTask(index)" class="fas fa-trash-alt mx-1"></i>
-                                    </li>
-                                </ul>
+                                        <li v-for="(task, index) in todoList" :key="index" 
+                                            :class="{ 'list-group-item': true, 'd-flex': true, 'justify-content-between': true, 'completed': task.done }"
+                                            @click="toggleTaskStatus(index)">
+                                            <span :style="{ 'text-decoration': task.done ? 'line-through' : 'none' }">{{ task.text }}</span>
+                                            <i @click="deleteTask(index)" class="fas fa-trash-alt mx-1"></i>
+                                        </li>                  
+                                  </ul>
                             </div>
                         </div>
                     </div>

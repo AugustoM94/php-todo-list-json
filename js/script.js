@@ -53,9 +53,20 @@ createApp({
          .catch((error) => {
           console.log(error);
           })
-    }
+    },
+toggleTaskStatus(index) {
+        this.todoList[index].done = !this.todoList[index].done;
 
+        const data = new FormData();
+        data.append("updateTask", JSON.stringify(this.todoList[index]));
+
+        axios
+            .post(this.apiUrl, data)
+            .then((response) => {
+                console.log(response);
+            })
   },
+},
   mounted() {
    this.readList();
   },
